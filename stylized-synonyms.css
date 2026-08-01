@@ -1,0 +1,26 @@
+body {
+	background-color: #D9A299;
+	font-family: "Courier New"; 
+}
+
+button {
+  border: none;
+  color: white;
+  background-color: #430A5D;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: "Courier New";
+}
+
+#keyword-result {
+	border-style: solid;
+	background-color: #0F3040;
+	color: white;
+	padding: 3px;
+	font-size: 22.5px;
+}

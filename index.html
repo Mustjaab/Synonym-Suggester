@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html>
+
+<head> 
+<title> Reume Synonym Suggester Proof of Concept </title> 
+<link rel='stylesheet' href="stylized-synonyms.css"></link>
+</head> 
+
+<body> 
+
+<h1> <center> Resume Synonym Suggester </center> </h1> 
+
+<center>
+<textarea id='keyword-input' rows = '100' cols = '99'> </textarea> <br>
+<button onclick='synonyms(value)'> Get Synonym </button>
+
+<p id='keyword-result' />
+</center>
+
+<script> 
+function synonyms(value) {
+	let detail_synonyms = ["thorough","meticoluous","attentively"];
+	let collaboration_synonyms = ["liason","coordinated with", "collaborated with"];
+	
+	let keyword = document.getElementById('keyword-input').value;
+	
+	let random1 = detail_synonyms.sort(() => 0.5 - Math.random())[0];
+	let random2 = collaboration_synonyms.sort(() => 0.5 - Math.random())[0];
+	
+	if (keyword.includes('detailed')) {
+		document.getElementById('keyword-result').innerHTML = random1;
+	}
+	if (keyword.includes('worked with')) {
+		document.getElementById('keyword-result').innerHTML = random2;
+	}
+	
+}
+</script> 
+
+</body>

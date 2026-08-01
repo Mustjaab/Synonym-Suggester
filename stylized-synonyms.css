@@ -23,4 +23,6 @@ button {
 	color: white;
 	padding: 3px;
 	font-size: 22.5px;
+	display: none;
 }
+

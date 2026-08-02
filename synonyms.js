@@ -1,3 +1,9 @@
+const synonyms_bank = {
+    "detail": ["thorough","meticulous","attentively"],
+    "collaboration": ["liaison","coordinated with", "collaborated with"],
+    "reviewed": ["audited", "reevaluated","examined"]
+};
+
 function synonyms(value) {
 	var selectedText = '';
 	
@@ -12,27 +18,19 @@ function synonyms(value) {
     } else return;
     
     document.getElementById('keyword-input').innerHTML = selectedText;
-    
-    let detail_synonyms = ["thorough","meticulous","attentively"];
-    let collaboration_synonyms = ["liaison","coordinated with", "collaborated with"];
-	let reviewed_synonyms = ["audited", "reevaluated","examined"];
-    
-    let random1 = detail_synonyms[Math.floor(Math.random() * detail_synonyms.length)];
-    let random2 = collaboration_synonyms[Math.floor(Math.random() * collaboration_synonyms.length)];
-	let random3 = reviewed_synonyms[Math.floor(Math.random() * reviewed_synonyms.length)];
-    
+        
     let resultElement = document.getElementById('keyword-result');
     
     if (selectedText.includes('detailed')) {
-        resultElement.innerHTML = random1;
+        resultElement.textContent = synonyms_bank.detail[2];
         resultElement.style.display = 'block'; 
     }
     else if (selectedText.includes('worked with')) {
-        resultElement.innerHTML = random2;
+        resultElement.innerHTML = synonyms_bank.collaboration[2];
         resultElement.style.display = 'block'; 
     }
 	else if (selectedText.includes('reviewed')) {
-		resultElement.innerHTML = random3;
+		resultElement.innerHTML = synonyms_bank.reviewed[2];
 		resultElement.style.display = 'block';
 	}
     else {
